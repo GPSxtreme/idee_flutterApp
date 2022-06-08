@@ -37,7 +37,7 @@ class MainApp extends StatelessWidget {
             Text('NAME', style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400,color: Colors.grey.shade600,letterSpacing: 2),),
             SizedBox(height: 10,),
             Text('Prudhvi', style: TextStyle(fontSize: 28,fontWeight: FontWeight.w400,color: Colors.amber.shade600,letterSpacing: 1.2),),
-            SizedBox(height: 50,),
+            SizedBox(height: 40,),
             Text('E-MAIL', style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400,color: Colors.grey.shade600,letterSpacing: 2),),
             SizedBox(height: 10,),
             Row(
@@ -47,12 +47,14 @@ class MainApp extends StatelessWidget {
                 Text('prudhvisuraaj@gmail.com',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w400,color: Colors.grey.shade400,letterSpacing: 1),)
               ],
             ),
-            SizedBox(height: 50,),
+            SizedBox(height: 40,),
             Text('AGE', style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400,color: Colors.grey.shade600,letterSpacing: 2),),
             SizedBox(height: 10,),
             Text('18', style: TextStyle(fontSize: 28,fontWeight: FontWeight.w400,color: Colors.amber.shade600,letterSpacing: 1.2),),
-
-
+            SizedBox(height: 40,),
+            Text('INSTITUTION', style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400,color: Colors.grey.shade600,letterSpacing: 2),),
+            SizedBox(height: 10,),
+            Text('AU', style: TextStyle(fontSize: 28,fontWeight: FontWeight.w400,color: Colors.amber.shade600,letterSpacing: 1.2),),
 
           ],
         ),
