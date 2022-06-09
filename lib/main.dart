@@ -6,8 +6,15 @@ void main() => runApp(MaterialApp(
   home: MainApp(),
 ));
 
-class MainApp extends StatelessWidget {
+class MainApp extends StatefulWidget {
   const MainApp({Key? key}) : super(key: key);
+
+  @override
+  State<MainApp> createState() => _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
+  int a = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +24,15 @@ class MainApp extends StatelessWidget {
         title: Text("Idee.",style: TextStyle(color: Colors.amber.shade400,fontSize:30),),
         centerTitle: true,
         backgroundColor: Colors.grey.shade800 ,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState((){
+            a++;
+          });
+        },
+        backgroundColor: Colors.grey.shade600,
+        child: Icon(Icons.add,size: 30,),
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(30, 20, 10, 0),
@@ -48,15 +64,13 @@ class MainApp extends StatelessWidget {
               ],
             ),
             SizedBox(height: 40,),
-            Text('AGE', style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400,color: Colors.grey.shade600,letterSpacing: 2),),
+            Text('LEVEL', style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400,color: Colors.grey.shade600,letterSpacing: 2),),
             SizedBox(height: 10,),
-            Text('18', style: TextStyle(fontSize: 28,fontWeight: FontWeight.w400,color: Colors.amber.shade600,letterSpacing: 1.2),),
+            Text('$a', style: TextStyle(fontSize: 28,fontWeight: FontWeight.w400,color: Colors.amber.shade600,letterSpacing: 1.2),),
             SizedBox(height: 40,),
             Text('INSTITUTION', style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400,color: Colors.grey.shade600,letterSpacing: 2),),
             SizedBox(height: 10,),
-            Text('AU', style: TextStyle(fontSize: 28,fontWeight: FontWeight.w400,color: Colors.amber.shade600,letterSpacing: 1.2),),
-
-          ],
+            Text('AU', style: TextStyle(fontSize: 28,fontWeight: FontWeight.w400,color: Colors.amber.shade600,letterSpacing: 1.2))],
         ),
       )
     );
